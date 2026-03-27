@@ -1,4 +1,4 @@
-package _struct
+package models
 
 type Category struct {
 	ID          int    `json:"id"`
@@ -36,12 +36,14 @@ type ItemsResponse struct {
 }
 
 type Item struct {
-	ID     int    `json:"id"`
-	Title  string `json:"name"`
-	Prices struct {
-		Cost         int `json:"cost"`
-		Price        int `json:"price"`
-		PriceRegular int `json:"priceRegular"`
-	} `json:"prices"`
-	CategoryID int `json:"categoryId"`
+	ID         int    `json:"id"`
+	Title      string `json:"name"`
+	Prices     Prices `json:"prices"`
+	CategoryID int    `json:"categoryId"`
+}
+
+type Prices struct {
+	Cost         int `json:"cost"`
+	Price        int `json:"price"`
+	PriceRegular int `json:"priceRegular"`
 }
