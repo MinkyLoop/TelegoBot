@@ -47,7 +47,7 @@ func main() {
 
 	go func() {
 		if err := botInstance.Start(); err != nil {
-			log.Fatalf("Пизда копченому %v", err)
+			log.Fatalf("пупупу %v", err)
 		}
 	}()
 
